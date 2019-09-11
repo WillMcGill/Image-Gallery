@@ -14,8 +14,16 @@ for (i = 1; i <= 5; i++){
   newImage.setAttribute('src', xxx);
   thumbBar.appendChild(newImage);
 
+  newImage.addEventListener("click", mainImage);
   
-}
+ 
+  
+  }
+  function mainImage(){
+  
+    console.log(newImage);
+  }
+
 
 
 
