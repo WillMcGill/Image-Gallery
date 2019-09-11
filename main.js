@@ -8,7 +8,7 @@ var overlay = document.querySelector('.overlay');
 
 for (i = 1; i <= 5; i++){
 
-  var imgPath = '/images/pic'+i+'.jpg';
+  var imgPath = 'images/pic'+i+'.jpg';
   console.log(imgPath);
   var newImage = document.createElement('img');
   newImage.setAttribute('src', imgPath);
