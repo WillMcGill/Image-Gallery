@@ -8,20 +8,19 @@ var overlay = document.querySelector('.overlay');
 
 for (i = 1; i <= 5; i++){
 
-  var xxx = '/images/pic'+i+'.jpg';
-  console.log(xxx);
+  var imgPath = '/images/pic'+i+'.jpg';
+  console.log(imgPath);
   var newImage = document.createElement('img');
-  newImage.setAttribute('src', xxx);
+  newImage.setAttribute('src', imgPath);
   thumbBar.appendChild(newImage);
 
   newImage.addEventListener("click", mainImage);
   
  
-  
-  }
-  function mainImage(){
-  
-    console.log(newImage);
+  function mainImage(e){
+      var src = e.target.getAttribute('src');
+      displayedImage.setAttribute('src', src);
+    }
   }
 
 /* Wiring up the Darken/Lighten button */
