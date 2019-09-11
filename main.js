@@ -24,8 +24,25 @@ for (i = 1; i <= 5; i++){
     console.log(newImage);
   }
 
-
-
-
-
 /* Wiring up the Darken/Lighten button */
+
+btn.setAttribute('class', btn);
+btn.textContent = 'Darken';
+
+
+btn.onclick = function() {
+  var shade = btn.getAttribute('class')
+  if (shade === 'dark') {
+    btn.setAttribute('class', 'light');
+    btn.textContent = 'Lighten';
+    overlay.style.backgroundColor = "rgba(0,0,0,0.5)";
+
+
+  } else {
+    btn.setAttribute('class', 'dark');
+    btn.textContent = 'Darken';
+    overlay.style.backgroundColor = "rgba(0,0,0,0)";
+    }
+  }
+  
+
